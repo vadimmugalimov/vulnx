@@ -6,7 +6,7 @@ from common.uriParser import parsing_url as hostd
 
 class GatherHost():
 
-    def __init__(self,url,headers=None):
+    def __init__(self, url, headers=None):
         self.url = url
         self.headers = headers
 

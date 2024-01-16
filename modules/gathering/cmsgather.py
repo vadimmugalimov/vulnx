@@ -15,7 +15,7 @@ def drupal_version(url,headers):
 
 
 def prestashop_version(url,headers):
-    response = requests.get(url, headers).text
+    response = requests.get(url, headers, verify=False).text
     try:
         matches = re.compile(r'Prestashop \d{0,9}').findall(response.text)
         if len(matches) > 0 and matches[0] != None and matches[0] != "":

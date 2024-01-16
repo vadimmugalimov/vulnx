@@ -226,7 +226,7 @@ class Dork:
         set_dork = self.__setdork__()
         google_query = 'https://www.google.com/search?q=' + set_dork['dork']+'&start='+str(num_p)
         print(' %s searching for : %s' % (que, google_query))
-        response = requests.get(google_query, headers=self.headers).text
+        response = requests.get(google_query, headers=self.headers, verify=False) # F1x3d!).text
         return response
 
     def search(self):

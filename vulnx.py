@@ -31,6 +31,12 @@ import warnings
 import signal
 import requests
 
+### Monkey Patch ###
+# DOES NOT WORK
+# import ssl
+# ssl.match_hostname = lambda cert, hostname: True
+### End ###
+
 HEADERS = {
     'User-Agent': random_UserAgent(),
     'Content-type' : '*/*',
